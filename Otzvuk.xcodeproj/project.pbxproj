@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		066B8635FFA5DCD0F263DA9C /* water.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A3428999996C734C873E5D91 /* water.m4a */; };
+		0F218A99E709BCD7ED93B156 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FCE928DD0CC4191122565F /* RecordingView.swift */; };
+		101A7C715135AE2347E15D9D /* PlaybackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E78EAAA37151669DC33506 /* PlaybackQueue.swift */; };
+		182EAF852F3072E0D451672E /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC5E46D9D5A58B9755717C /* Library.swift */; };
+		2A4F667CCA98B93960DF3614 /* AudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39264D5204B4CA4616F2A74B /* AudioSessionController.swift */; };
+		2D28DDF53AD5E0FAF7E432DF /* TextLibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D04177B7AE38AE5C6600D /* TextLibraryData.swift */; };
+		39BD3B98A3215EC0DE5B33EA /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80135D868277B64314B56D /* LibraryTests.swift */; };
+		4951531E6C972C778E990E42 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA86EFA0D14FF0CBBE3523 /* MusicTrack.swift */; };
+		4E2C22067A1E9DB23D8950C5 /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B9E042C4004223EF4F495 /* MusicLibrary.swift */; };
+		5FFCE4CE3B7014059CD35034 /* TextLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B250CC6E47F92B1E603C1 /* TextLibrary.swift */; };
+		61284DA99E8995085603C611 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E823DBE7495AB499C3175 /* HomeView.swift */; };
+		627096BF6B2BB1F7902EB337 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBB656524D1CE4C4647F7B /* AppModel.swift */; };
+		637FA79A81B1C0DC6B0D350B /* AudioReverserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12657F5A7F21D248900C1EA5 /* AudioReverserTests.swift */; };
+		65057532641C260F62761033 /* FileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2572ADD236ADA35402DBCC28 /* FileStore.swift */; };
+		8041A8DD9E34F59A213CB36D /* calm.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 27FA38709245804BDAD653E6 /* calm.m4a */; };
+		8894065FBCD54B028294137E /* WishlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AE5BB454C141E7362CC8B /* WishlistTests.swift */; };
+		89670B7AB22DCD0883ED99E3 /* SessionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF3C21DE6BBE3C4BEB9700 /* SessionPlayer.swift */; };
+		8A5B7DF1B7CA3D3B102D8D06 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C4F3DBA0C317C3B1AED44 /* VoiceRecorder.swift */; };
+		8B56D1764AD8F35EDAEDD2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F17FB375155E4DDDF4F40A /* Assets.xcassets */; };
+		901581A748967681120ADAEC /* Wishlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1503245228A498F2D0314 /* Wishlist.swift */; };
+		9879797D26CCE326C9D26C5E /* AudioReverser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929421DEEFAD30EA5F50504 /* AudioReverser.swift */; };
+		A5DD058D0369C12098ABB0DF /* dawn.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2906629B5E4B32648CED2BD5 /* dawn.m4a */; };
+		A76169C10B949FEC5BB3D943 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A231652460369C1F9110A /* TestSupport.swift */; };
+		ACE66C32269F9B84D1697685 /* SessionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558603AD2CAA8F5AB2FAC26B /* SessionSettingsView.swift */; };
+		B2D51BBF3EB5BD0FC65B2BA1 /* WishItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5884FA82D186CC3FF6BEFE /* WishItem.swift */; };
+		C5C0106C1CAAD68EF8E148CF /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D58DE973DD14929FB4D57 /* Formatting.swift */; };
+		D1A3070C72DF3FE9286C8425 /* SessionPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7259719BF6AA2839F966EE7D /* SessionPlayerTests.swift */; };
+		E79CE3FF00142EC1ACADFC00 /* MusicLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192F6654A9DD76AD248D149 /* MusicLibraryTests.swift */; };
+		EE45296B98E6548CF9083FF3 /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF53CDDFFADA0D235498A4 /* Affirmation.swift */; };
+		F23BA20476486114E180E685 /* TextLibraryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DAC6FEB7B3DE4C8E599CF5 /* TextLibraryViews.swift */; };
+		F773C10C71876909D105D742 /* PlaybackQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDDA4ECB3F1EE53A65E77E /* PlaybackQueueTests.swift */; };
+		F89862344A5C22FD83CB45B3 /* SessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94F5B18758A77C35B53E27 /* SessionSettings.swift */; };
+		F8A573B8E36539591C935C4C /* OtzvukApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B60DC178B158141F7B0DDF9 /* OtzvukApp.swift */; };
+		FB353100B393B6CA7DE7E697 /* ReversedAudioCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BB3AA338AF3AE525BA0C1C /* ReversedAudioCache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B399CAA781DABCE13847590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A883F8AFE2A5D9CEFA39F0EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 598EE752C9A7DB10BEA2685C;
+			remoteInfo = Otzvuk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050D04177B7AE38AE5C6600D /* TextLibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLibraryData.swift; sourceTree = "<group>"; };
+		10E78EAAA37151669DC33506 /* PlaybackQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackQueue.swift; sourceTree = "<group>"; };
+		12657F5A7F21D248900C1EA5 /* AudioReverserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReverserTests.swift; sourceTree = "<group>"; };
+		17DAC6FEB7B3DE4C8E599CF5 /* TextLibraryViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLibraryViews.swift; sourceTree = "<group>"; };
+		19FCE928DD0CC4191122565F /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		1AFA86EFA0D14FF0CBBE3523 /* MusicTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
+		1B94F5B18758A77C35B53E27 /* SessionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSettings.swift; sourceTree = "<group>"; };
+		2572ADD236ADA35402DBCC28 /* FileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStore.swift; sourceTree = "<group>"; };
+		27FA38709245804BDAD653E6 /* calm.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = calm.m4a; sourceTree = "<group>"; };
+		2906629B5E4B32648CED2BD5 /* dawn.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dawn.m4a; sourceTree = "<group>"; };
+		2BFF53CDDFFADA0D235498A4 /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
+		2F4EE9B022E5177C08BD2FC8 /* Otzvuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otzvuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39264D5204B4CA4616F2A74B /* AudioSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionController.swift; sourceTree = "<group>"; };
+		4192F6654A9DD76AD248D149 /* MusicLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibraryTests.swift; sourceTree = "<group>"; };
+		49DDDA4ECB3F1EE53A65E77E /* PlaybackQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackQueueTests.swift; sourceTree = "<group>"; };
+		4B60DC178B158141F7B0DDF9 /* OtzvukApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtzvukApp.swift; sourceTree = "<group>"; };
+		558603AD2CAA8F5AB2FAC26B /* SessionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSettingsView.swift; sourceTree = "<group>"; };
+		579B250CC6E47F92B1E603C1 /* TextLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLibrary.swift; sourceTree = "<group>"; };
+		6B2C4F3DBA0C317C3B1AED44 /* VoiceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
+		6C5A231652460369C1F9110A /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
+		702D58DE973DD14929FB4D57 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		7259719BF6AA2839F966EE7D /* SessionPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlayerTests.swift; sourceTree = "<group>"; };
+		79BBB656524D1CE4C4647F7B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		97F17FB375155E4DDDF4F40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3428999996C734C873E5D91 /* water.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.m4a; sourceTree = "<group>"; };
+		ADBF3C21DE6BBE3C4BEB9700 /* SessionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlayer.swift; sourceTree = "<group>"; };
+		B62AD898273A16A82260F5EB /* OtzvukTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OtzvukTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD1503245228A498F2D0314 /* Wishlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wishlist.swift; sourceTree = "<group>"; };
+		BD5884FA82D186CC3FF6BEFE /* WishItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishItem.swift; sourceTree = "<group>"; };
+		D85B9E042C4004223EF4F495 /* MusicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		DB8E823DBE7495AB499C3175 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E5BB3AA338AF3AE525BA0C1C /* ReversedAudioCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedAudioCache.swift; sourceTree = "<group>"; };
+		E929421DEEFAD30EA5F50504 /* AudioReverser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReverser.swift; sourceTree = "<group>"; };
+		ED80135D868277B64314B56D /* LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
+		EEBC5E46D9D5A58B9755717C /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		FB1AE5BB454C141E7362CC8B /* WishlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0F2B8AA90F7BC8370018B72E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2572ADD236ADA35402DBCC28 /* FileStore.swift */,
+				EEBC5E46D9D5A58B9755717C /* Library.swift */,
+				D85B9E042C4004223EF4F495 /* MusicLibrary.swift */,
+				BAD1503245228A498F2D0314 /* Wishlist.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		274A4F507A15BEFFCF66C9B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				702D58DE973DD14929FB4D57 /* Formatting.swift */,
+				DB8E823DBE7495AB499C3175 /* HomeView.swift */,
+				19FCE928DD0CC4191122565F /* RecordingView.swift */,
+				558603AD2CAA8F5AB2FAC26B /* SessionSettingsView.swift */,
+				17DAC6FEB7B3DE4C8E599CF5 /* TextLibraryViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		389894AEE1BB9D2677DAA637 /* OtzvukTests */ = {
+			isa = PBXGroup;
+			children = (
+				12657F5A7F21D248900C1EA5 /* AudioReverserTests.swift */,
+				ED80135D868277B64314B56D /* LibraryTests.swift */,
+				4192F6654A9DD76AD248D149 /* MusicLibraryTests.swift */,
+				49DDDA4ECB3F1EE53A65E77E /* PlaybackQueueTests.swift */,
+				7259719BF6AA2839F966EE7D /* SessionPlayerTests.swift */,
+				6C5A231652460369C1F9110A /* TestSupport.swift */,
+				FB1AE5BB454C141E7362CC8B /* WishlistTests.swift */,
+			);
+			path = OtzvukTests;
+			sourceTree = "<group>";
+		};
+		3FECF7EAAB52984382483DB0 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				27FA38709245804BDAD653E6 /* calm.m4a */,
+				2906629B5E4B32648CED2BD5 /* dawn.m4a */,
+				A3428999996C734C873E5D91 /* water.m4a */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		4B8AC1EBDF3FA06FEC5BC6CF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				79BBB656524D1CE4C4647F7B /* AppModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5FC150D0632445D1B51CA850 = {
+			isa = PBXGroup;
+			children = (
+				9EE9685814BBCF495ABD8CD7 /* Otzvuk */,
+				389894AEE1BB9D2677DAA637 /* OtzvukTests */,
+				679AB69D7F9B105715763339 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6170120CFFB72D86A7F2671A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BFF53CDDFFADA0D235498A4 /* Affirmation.swift */,
+				1AFA86EFA0D14FF0CBBE3523 /* MusicTrack.swift */,
+				1B94F5B18758A77C35B53E27 /* SessionSettings.swift */,
+				579B250CC6E47F92B1E603C1 /* TextLibrary.swift */,
+				050D04177B7AE38AE5C6600D /* TextLibraryData.swift */,
+				BD5884FA82D186CC3FF6BEFE /* WishItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63DF3867845695389FA64F2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97F17FB375155E4DDDF4F40A /* Assets.xcassets */,
+				3FECF7EAAB52984382483DB0 /* Music */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		679AB69D7F9B105715763339 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F4EE9B022E5177C08BD2FC8 /* Otzvuk.app */,
+				B62AD898273A16A82260F5EB /* OtzvukTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EE9685814BBCF495ABD8CD7 /* Otzvuk */ = {
+			isa = PBXGroup;
+			children = (
+				4B60DC178B158141F7B0DDF9 /* OtzvukApp.swift */,
+				4B8AC1EBDF3FA06FEC5BC6CF /* App */,
+				D2B075072C5A06CA7926526F /* Audio */,
+				6170120CFFB72D86A7F2671A /* Models */,
+				63DF3867845695389FA64F2A /* Resources */,
+				0F2B8AA90F7BC8370018B72E /* Storage */,
+				274A4F507A15BEFFCF66C9B6 /* Views */,
+			);
+			path = Otzvuk;
+			sourceTree = "<group>";
+		};
+		D2B075072C5A06CA7926526F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E929421DEEFAD30EA5F50504 /* AudioReverser.swift */,
+				39264D5204B4CA4616F2A74B /* AudioSessionController.swift */,
+				10E78EAAA37151669DC33506 /* PlaybackQueue.swift */,
+				E5BB3AA338AF3AE525BA0C1C /* ReversedAudioCache.swift */,
+				ADBF3C21DE6BBE3C4BEB9700 /* SessionPlayer.swift */,
+				6B2C4F3DBA0C317C3B1AED44 /* VoiceRecorder.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		122CEA617718D25ACE4F74B3 /* OtzvukTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30151C06559228FD12AE489D /* Build configuration list for PBXNativeTarget "OtzvukTests" */;
+			buildPhases = (
+				E5B1835C49F7FB4CABC98B3F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				022385B0B580762D4BF05A25 /* PBXTargetDependency */,
+			);
+			name = OtzvukTests;
+			packageProductDependencies = (
+			);
+			productName = OtzvukTests;
+			productReference = B62AD898273A16A82260F5EB /* OtzvukTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		598EE752C9A7DB10BEA2685C /* Otzvuk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F6DD8D365B12B560F73FFC /* Build configuration list for PBXNativeTarget "Otzvuk" */;
+			buildPhases = (
+				AB68EBDA2D07755987F12BBE /* Sources */,
+				03706C1DD5541961CA24BB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Otzvuk;
+			packageProductDependencies = (
+			);
+			productName = Otzvuk;
+			productReference = 2F4EE9B022E5177C08BD2FC8 /* Otzvuk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A883F8AFE2A5D9CEFA39F0EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					122CEA617718D25ACE4F74B3 = {
+						ProvisioningStyle = Automatic;
+					};
+					598EE752C9A7DB10BEA2685C = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C3D046DD669508FBF2A0A95D /* Build configuration list for PBXProject "Otzvuk" */;
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ru,
+			);
+			mainGroup = 5FC150D0632445D1B51CA850;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 679AB69D7F9B105715763339 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				598EE752C9A7DB10BEA2685C /* Otzvuk */,
+				122CEA617718D25ACE4F74B3 /* OtzvukTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03706C1DD5541961CA24BB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B56D1764AD8F35EDAEDD2AA /* Assets.xcassets in Resources */,
+				8041A8DD9E34F59A213CB36D /* calm.m4a in Resources */,
+				A5DD058D0369C12098ABB0DF /* dawn.m4a in Resources */,
+				066B8635FFA5DCD0F263DA9C /* water.m4a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB68EBDA2D07755987F12BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE45296B98E6548CF9083FF3 /* Affirmation.swift in Sources */,
+				627096BF6B2BB1F7902EB337 /* AppModel.swift in Sources */,
+				9879797D26CCE326C9D26C5E /* AudioReverser.swift in Sources */,
+				2A4F667CCA98B93960DF3614 /* AudioSessionController.swift in Sources */,
+				65057532641C260F62761033 /* FileStore.swift in Sources */,
+				C5C0106C1CAAD68EF8E148CF /* Formatting.swift in Sources */,
+				61284DA99E8995085603C611 /* HomeView.swift in Sources */,
+				182EAF852F3072E0D451672E /* Library.swift in Sources */,
+				4E2C22067A1E9DB23D8950C5 /* MusicLibrary.swift in Sources */,
+				4951531E6C972C778E990E42 /* MusicTrack.swift in Sources */,
+				F8A573B8E36539591C935C4C /* OtzvukApp.swift in Sources */,
+				101A7C715135AE2347E15D9D /* PlaybackQueue.swift in Sources */,
+				0F218A99E709BCD7ED93B156 /* RecordingView.swift in Sources */,
+				FB353100B393B6CA7DE7E697 /* ReversedAudioCache.swift in Sources */,
+				89670B7AB22DCD0883ED99E3 /* SessionPlayer.swift in Sources */,
+				F89862344A5C22FD83CB45B3 /* SessionSettings.swift in Sources */,
+				ACE66C32269F9B84D1697685 /* SessionSettingsView.swift in Sources */,
+				5FFCE4CE3B7014059CD35034 /* TextLibrary.swift in Sources */,
+				2D28DDF53AD5E0FAF7E432DF /* TextLibraryData.swift in Sources */,
+				F23BA20476486114E180E685 /* TextLibraryViews.swift in Sources */,
+				8A5B7DF1B7CA3D3B102D8D06 /* VoiceRecorder.swift in Sources */,
+				B2D51BBF3EB5BD0FC65B2BA1 /* WishItem.swift in Sources */,
+				901581A748967681120ADAEC /* Wishlist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B1835C49F7FB4CABC98B3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637FA79A81B1C0DC6B0D350B /* AudioReverserTests.swift in Sources */,
+				39BD3B98A3215EC0DE5B33EA /* LibraryTests.swift in Sources */,
+				E79CE3FF00142EC1ACADFC00 /* MusicLibraryTests.swift in Sources */,
+				F773C10C71876909D105D742 /* PlaybackQueueTests.swift in Sources */,
+				D1A3070C72DF3FE9286C8425 /* SessionPlayerTests.swift in Sources */,
+				A76169C10B949FEC5BB3D943 /* TestSupport.swift in Sources */,
+				8894065FBCD54B028294137E /* WishlistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		022385B0B580762D4BF05A25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 598EE752C9A7DB10BEA2685C /* Otzvuk */;
+			targetProxy = 5B399CAA781DABCE13847590 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06B374BC571BDF1321204413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oledjo.otzvuk.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otzvuk.app/Otzvuk";
+			};
+			name = Debug;
+		};
+		0A75DD1A3D9153D27B4DF789 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8E63Y26QH7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Otzvuk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oledjo.otzvuk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		33842CBA80D7EAF7CA3B03AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		465A87C1B046989C94B108AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B0678E4BDAF156BE636D5447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8E63Y26QH7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Otzvuk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oledjo.otzvuk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B16EFE6F85219D9FB2D68DC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oledjo.otzvuk.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otzvuk.app/Otzvuk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30151C06559228FD12AE489D /* Build configuration list for PBXNativeTarget "OtzvukTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06B374BC571BDF1321204413 /* Debug */,
+				B16EFE6F85219D9FB2D68DC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C3D046DD669508FBF2A0A95D /* Build configuration list for PBXProject "Otzvuk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33842CBA80D7EAF7CA3B03AD /* Debug */,
+				465A87C1B046989C94B108AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D2F6DD8D365B12B560F73FFC /* Build configuration list for PBXNativeTarget "Otzvuk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A75DD1A3D9153D27B4DF789 /* Debug */,
+				B0678E4BDAF156BE636D5447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A883F8AFE2A5D9CEFA39F0EC /* Project object */;
+}
