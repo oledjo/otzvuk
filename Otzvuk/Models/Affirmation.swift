@@ -7,7 +7,6 @@ struct Affirmation: Identifiable, Codable, Equatable {
     var fileName: String
     var duration: TimeInterval
     var createdAt: Date
-    var playsReversed: Bool = false
     var isSelected: Bool = false
 
     /// Имя файла обработанной копии (кеш обратного воспроизведения).

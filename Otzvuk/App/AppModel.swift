@@ -49,8 +49,9 @@ final class AppModel: ObservableObject {
     /// Сохраняет запись; если она сделана по тексту из «хочу записать», убирает его из списка.
     func saveRecording(title: String, wish: WishItem? = nil) {
         guard let take = recorder.commit() else { return }
-        library.add(id: take.id, title: title, fileName: take.fileName, duration: take.duration)
+        let item = library.add(id: take.id, title: title, fileName: take.fileName, duration: take.duration)
         if let wish { wishlist.remove(id: wish.id) }
+        if settings.value.reversed { prepareReversed([item]) }
     }
 
     // MARK: - Библиотека
@@ -63,28 +64,34 @@ final class AppModel: ObservableObject {
         Task { await cache.discard(destination: destination) }
     }
 
-    func setReversed(_ on: Bool, for item: Affirmation) {
-        library.setReversed(on, id: item.id)
-        if on { prepareReversed(item) }
+    /// Включает или выключает обратное воспроизведение для всего плейлиста.
+    /// При включении заранее готовит развёрнутые копии выбранных записей.
+    func setReversedForAll(_ on: Bool) {
+        settings.value.reversed = on
+        if on { prepareReversed(library.selected) }
     }
 
-    /// Готовит развёрнутую копию заранее, чтобы включение режима не задерживало воспроизведение.
-    private func prepareReversed(_ item: Affirmation) {
-        guard !preparing.contains(item.id) else { return }
-        preparing.insert(item.id)
-        let source = store.recordingURL(item.fileName)
-        let destination = store.reversedURL(item.reversedFileName)
+    /// Готовит развёрнутые копии заранее, чтобы включение режима не задерживало воспроизведение.
+    private func prepareReversed(_ items: [Affirmation]) {
+        let pending = items.filter { !preparing.contains($0.id) }
+        guard !pending.isEmpty else { return }
+        pending.forEach { preparing.insert($0.id) }
+        let store = self.store, cache = self.cache
         Task {
-            do {
-                try await cache.ensureReversed(source: source, destination: destination)
-            } catch is CancellationError {
-            } catch {
-                if library.affirmation(id: item.id) != nil {
-                    alertMessage = "Не удалось подготовить обратную версию «\(item.title)». Исходная запись не изменена."
-                    library.setReversed(false, id: item.id)
+            var failed = 0
+            for item in pending {
+                do {
+                    try await cache.ensureReversed(source: store.recordingURL(item.fileName),
+                                                   destination: store.reversedURL(item.reversedFileName))
+                } catch is CancellationError {
+                } catch {
+                    failed += 1
                 }
+                preparing.remove(item.id)
             }
-            preparing.remove(item.id)
+            if failed > 0 {
+                alertMessage = "Не удалось подготовить обратную версию для записей: \(failed). Исходные записи не изменены."
+            }
         }
     }
 

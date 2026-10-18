@@ -42,6 +42,13 @@ final class Wishlist: ObservableObject {
         save()
     }
 
+    /// Следующий текст для записи после `id`; если `id` последний — первый из оставшихся; если других нет — nil.
+    func next(after id: UUID) -> WishItem? {
+        guard let index = items.firstIndex(where: { $0.id == id }) else { return items.first }
+        let following = items.suffix(from: index + 1).first
+        return following ?? items.first { $0.id != id }
+    }
+
     func remove(id: UUID) {
         items.removeAll { $0.id == id }
         save()

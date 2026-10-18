@@ -112,6 +112,11 @@ struct HomeView: View {
             }
             if !library.affirmations.isEmpty {
             Section {
+                ReverseAllRow()
+            } footer: {
+                Text("Все выбранные записи будут звучать с конца к началу. Оригиналы не меняются.")
+            }
+            Section {
                 ForEach(library.affirmations) { item in
                     AffirmationRow(item: item)
                         .swipeActions(edge: .trailing, allowsFullSwipe: false) {
@@ -200,24 +205,6 @@ struct AffirmationRow: View {
             .accessibilityHint("Нажмите дважды, чтобы выбрать или снять выбор")
             .accessibilityAddTraits(.isButton)
 
-            HStack {
-                Label("Задом наперёд", systemImage: "arrow.uturn.backward")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                Spacer(minLength: 8)
-                if app.preparing.contains(item.id) {
-                    ProgressView().controlSize(.small)
-                        .accessibilityLabel("Подготовка")
-                }
-                Toggle("Задом наперёд, \(item.title)", isOn: Binding(
-                    get: { item.playsReversed },
-                    set: { app.setReversed($0, for: item) }
-                ))
-                .labelsHidden()
-                .tint(.accentColor)
-                .accessibilityLabel("Задом наперёд, \(item.title)")
-            }
-            .padding(.leading, 38)
         }
         .padding(.vertical, 6)
     }
@@ -225,6 +212,29 @@ struct AffirmationRow: View {
     private var valueDescription: String {
         let selected = item.isSelected ? "выбрано" : "не выбрано"
         return "\(selected), \(Format.clock(item.duration))"
+    }
+}
+
+/// Переключатель обратного воспроизведения для всего плейлиста.
+struct ReverseAllRow: View {
+    @EnvironmentObject private var app: AppModel
+    @EnvironmentObject private var settings: SettingsStore
+
+    var body: some View {
+        Toggle(isOn: Binding(
+            get: { settings.value.reversed },
+            set: { app.setReversedForAll($0) }
+        )) {
+            HStack(spacing: 8) {
+                Label("Задом наперёд", systemImage: "arrow.uturn.backward")
+                if !app.preparing.isEmpty {
+                    ProgressView().controlSize(.small)
+                        .accessibilityLabel("Подготовка записей")
+                }
+            }
+        }
+        .tint(.accentColor)
+        .accessibilityLabel("Задом наперёд, все записи")
     }
 }
 
@@ -323,7 +333,8 @@ struct BottomBar: View {
     private var summary: String {
         let s = settings.value
         let musicName = music.track(id: s.musicTrackID)?.title ?? "Без музыки"
-        return "\(Format.gap(s.gapSeconds)) · \(Format.timer(s.timerSeconds)) · \(musicName)"
+        let reversed = s.reversed ? " · Задом наперёд" : ""
+        return "\(Format.gap(s.gapSeconds)) · \(Format.timer(s.timerSeconds)) · \(musicName)\(reversed)"
     }
 }
 

@@ -28,6 +28,7 @@
 		8B56D1764AD8F35EDAEDD2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F17FB375155E4DDDF4F40A /* Assets.xcassets */; };
 		901581A748967681120ADAEC /* Wishlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1503245228A498F2D0314 /* Wishlist.swift */; };
 		9879797D26CCE326C9D26C5E /* AudioReverser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929421DEEFAD30EA5F50504 /* AudioReverser.swift */; };
+		9BF64280F4A51DF040D5140F /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938B7BF174DDF00716F3609 /* SettingsTests.swift */; };
 		A5DD058D0369C12098ABB0DF /* dawn.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2906629B5E4B32648CED2BD5 /* dawn.m4a */; };
 		A76169C10B949FEC5BB3D943 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A231652460369C1F9110A /* TestSupport.swift */; };
 		ACE66C32269F9B84D1697685 /* SessionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558603AD2CAA8F5AB2FAC26B /* SessionSettingsView.swift */; };
@@ -58,14 +59,15 @@
 		10E78EAAA37151669DC33506 /* PlaybackQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackQueue.swift; sourceTree = "<group>"; };
 		12657F5A7F21D248900C1EA5 /* AudioReverserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReverserTests.swift; sourceTree = "<group>"; };
 		17DAC6FEB7B3DE4C8E599CF5 /* TextLibraryViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLibraryViews.swift; sourceTree = "<group>"; };
+		1938B7BF174DDF00716F3609 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		19FCE928DD0CC4191122565F /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		1AFA86EFA0D14FF0CBBE3523 /* MusicTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
 		1B94F5B18758A77C35B53E27 /* SessionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSettings.swift; sourceTree = "<group>"; };
 		2572ADD236ADA35402DBCC28 /* FileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStore.swift; sourceTree = "<group>"; };
-		27FA38709245804BDAD653E6 /* calm.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = calm.m4a; sourceTree = "<group>"; };
-		2906629B5E4B32648CED2BD5 /* dawn.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dawn.m4a; sourceTree = "<group>"; };
+		27FA38709245804BDAD653E6 /* calm.m4a */ = {isa = PBXFileReference; path = calm.m4a; sourceTree = "<group>"; };
+		2906629B5E4B32648CED2BD5 /* dawn.m4a */ = {isa = PBXFileReference; path = dawn.m4a; sourceTree = "<group>"; };
 		2BFF53CDDFFADA0D235498A4 /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
-		2F4EE9B022E5177C08BD2FC8 /* Otzvuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otzvuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F4EE9B022E5177C08BD2FC8 /* Otzvuk.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Otzvuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39264D5204B4CA4616F2A74B /* AudioSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionController.swift; sourceTree = "<group>"; };
 		4192F6654A9DD76AD248D149 /* MusicLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibraryTests.swift; sourceTree = "<group>"; };
 		49DDDA4ECB3F1EE53A65E77E /* PlaybackQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackQueueTests.swift; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		7259719BF6AA2839F966EE7D /* SessionPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlayerTests.swift; sourceTree = "<group>"; };
 		79BBB656524D1CE4C4647F7B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		97F17FB375155E4DDDF4F40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A3428999996C734C873E5D91 /* water.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.m4a; sourceTree = "<group>"; };
+		A3428999996C734C873E5D91 /* water.m4a */ = {isa = PBXFileReference; path = water.m4a; sourceTree = "<group>"; };
 		ADBF3C21DE6BBE3C4BEB9700 /* SessionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlayer.swift; sourceTree = "<group>"; };
 		B62AD898273A16A82260F5EB /* OtzvukTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OtzvukTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD1503245228A498F2D0314 /* Wishlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wishlist.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				4192F6654A9DD76AD248D149 /* MusicLibraryTests.swift */,
 				49DDDA4ECB3F1EE53A65E77E /* PlaybackQueueTests.swift */,
 				7259719BF6AA2839F966EE7D /* SessionPlayerTests.swift */,
+				1938B7BF174DDF00716F3609 /* SettingsTests.swift */,
 				6C5A231652460369C1F9110A /* TestSupport.swift */,
 				FB1AE5BB454C141E7362CC8B /* WishlistTests.swift */,
 			);
@@ -345,6 +348,7 @@
 				E79CE3FF00142EC1ACADFC00 /* MusicLibraryTests.swift in Sources */,
 				F773C10C71876909D105D742 /* PlaybackQueueTests.swift in Sources */,
 				D1A3070C72DF3FE9286C8425 /* SessionPlayerTests.swift in Sources */,
+				9BF64280F4A51DF040D5140F /* SettingsTests.swift in Sources */,
 				A76169C10B949FEC5BB3D943 /* TestSupport.swift in Sources */,
 				8894065FBCD54B028294137E /* WishlistTests.swift in Sources */,
 			);
@@ -384,7 +388,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8E63Y26QH7;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Otzvuk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -528,7 +531,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8E63Y26QH7;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Otzvuk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

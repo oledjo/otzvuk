@@ -4,6 +4,9 @@ struct RecordingView: View {
     /// Текст из «хочу записать»: показывается над кнопкой записи, из него берётся название.
     var wish: WishItem? = nil
 
+    @EnvironmentObject private var wishlist: Wishlist
+    @State private var currentWish: WishItem?
+
     @EnvironmentObject private var app: AppModel
     @EnvironmentObject private var library: Library
     @EnvironmentObject private var recorder: VoiceRecorder
@@ -28,7 +31,7 @@ struct RecordingView: View {
                     .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color(.secondarySystemBackground)))
                     .accessibilityLabel("Название записи")
 
-                if let wish {
+                if let wish = currentWish {
                     Text(wish.text)
                         .font(.title3)
                         .multilineTextAlignment(.center)
@@ -101,7 +104,8 @@ struct RecordingView: View {
         }
         .interactiveDismissDisabled(recorder.hasTake)
         .onAppear {
-            if title.isEmpty { title = wish?.suggestedTitle ?? library.nextDefaultTitle() }
+            if currentWish == nil { currentWish = wish }
+            if title.isEmpty { title = currentWish?.suggestedTitle ?? library.nextDefaultTitle() }
         }
         .onDisappear { recorder.discard() }
         .presentationDetents([.large])
@@ -160,8 +164,7 @@ struct RecordingView: View {
 
     private var saveButton: some View {
         Button {
-            app.saveRecording(title: title, wish: wish)
-            dismiss()
+            saveAndContinue()
         } label: {
             Text("Сохранить")
                 .fontWeight(.semibold)
@@ -206,6 +209,20 @@ struct RecordingView: View {
         case .idle: return "Нажмите, чтобы начать запись"
         case .recording: return "Говорите. Нажмите, чтобы остановить"
         case .recorded: return recorder.isPreviewing ? "Идёт прослушивание" : "Прослушайте запись, затем сохраните или перезапишите"
+        }
+    }
+
+    /// Сохраняет запись. Если она сделана по тексту из «Хочу записать» и в списке есть ещё тексты,
+    /// сразу открывает следующий; иначе закрывает окно.
+    private func saveAndContinue() {
+        let current = currentWish
+        let next = current.flatMap { wishlist.next(after: $0.id) }
+        app.saveRecording(title: title, wish: current)
+        if let next {
+            currentWish = next
+            title = next.suggestedTitle
+        } else {
+            dismiss()
         }
     }
 

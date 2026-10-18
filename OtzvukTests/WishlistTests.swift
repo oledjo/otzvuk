@@ -52,6 +52,18 @@ final class WishlistTests: XCTestCase {
         XCTAssertTrue(wishlist.items.isEmpty)
     }
 
+    func testNextAfterWalksListAndStopsWhenNoOthers() {
+        let wishlist = Wishlist(store: TestSupport.tempStore())
+        let items = Array(TextLibrary.categories[0].items.prefix(3))
+        wishlist.addAll(items)
+        let ids = wishlist.items.map(\.id)
+        XCTAssertEqual(wishlist.next(after: ids[0])?.id, ids[1])
+        XCTAssertEqual(wishlist.next(after: ids[1])?.id, ids[2])
+        XCTAssertEqual(wishlist.next(after: ids[2])?.id, ids[0], "после последнего — первый из оставшихся")
+        wishlist.remove(id: ids[1]); wishlist.remove(id: ids[2])
+        XCTAssertNil(wishlist.next(after: ids[0]), "других текстов нет")
+    }
+
     func testSuggestedTitleIsShortened() {
         let long = WishItem(id: UUID(), text: String(repeating: "слово ", count: 30), sourceID: nil)
         XCTAssertLessThanOrEqual(long.suggestedTitle.count, 61)

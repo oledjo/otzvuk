@@ -34,7 +34,7 @@ final class SessionPlayerTests: XCTestCase {
         let name = "\(id.uuidString).m4a"
         try TestSupport.writeTone(to: store.recordingURL(name), seconds: seconds, frequency: 300 + Double(library.affirmations.count) * 100)
         let item = library.add(id: id, title: title, fileName: name, duration: seconds)
-        if reversed { library.setReversed(true, id: id) }
+        if reversed { settings.value.reversed = true }
         return item
     }
 

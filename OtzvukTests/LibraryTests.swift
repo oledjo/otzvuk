@@ -14,12 +14,10 @@ final class LibraryTests: XCTestCase {
         let store = TestSupport.tempStore()
         let first = Library(store: store)
         let item = try addItem(first, title: "Я спокоен")
-        first.setReversed(true, id: item.id)
 
         let second = Library(store: store) // «перезапуск»
         XCTAssertEqual(second.affirmations.count, 1)
         XCTAssertEqual(second.affirmations[0].title, "Я спокоен")
-        XCTAssertTrue(second.affirmations[0].playsReversed)
         XCTAssertTrue(second.affirmations[0].isSelected)
     }
 
@@ -30,16 +28,6 @@ final class LibraryTests: XCTestCase {
         XCTAssertEqual(library.affirmation(id: item.id)?.title, "Новое")
         library.rename(id: item.id, to: "   ")
         XCTAssertEqual(library.affirmation(id: item.id)?.title, "Новое")
-    }
-
-    func testTogglingReverseNeverTouchesOriginal() throws {
-        let library = Library(store: TestSupport.tempStore())
-        let item = try addItem(library, title: "A")
-        let url = library.store.recordingURL(item.fileName)
-        let before = try Data(contentsOf: url)
-        library.setReversed(true, id: item.id)
-        library.setReversed(false, id: item.id)
-        XCTAssertEqual(try Data(contentsOf: url), before)
     }
 
     func testDeleteRemovesOriginalAndReversedCopy() async throws {

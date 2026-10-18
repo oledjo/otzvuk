@@ -42,9 +42,6 @@ final class Library: ObservableObject {
 
     func toggleSelected(id: UUID) { update(id) { $0.isSelected.toggle() } }
 
-    /// Меняет только флаг: исходный файл не затрагивается.
-    func setReversed(_ on: Bool, id: UUID) { update(id) { $0.playsReversed = on } }
-
     /// Удаляет запись вместе с оригиналом и обработанной копией.
     func delete(id: UUID) {
         guard let item = affirmation(id: id) else { return }
@@ -60,7 +57,7 @@ final class Library: ObservableObject {
         store.removeOrphans(
             recordings: Set(affirmations.map(\.fileName)),
             music: keepingMusic,
-            reversed: Set(affirmations.filter(\.playsReversed).map(\.reversedFileName))
+            reversed: Set(affirmations.map(\.reversedFileName))
         )
     }
 

@@ -252,7 +252,8 @@ final class SessionPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
         currentTitle = item.title
         let token = UUID()
         playToken = token
-        isPreparing = item.playsReversed
+        let reversed = settings.value.reversed
+        isPreparing = reversed
         updateNowPlaying()
 
         let store = library.store
@@ -261,7 +262,7 @@ final class SessionPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
             do {
                 let source = store.recordingURL(item.fileName)
                 var url = source
-                if item.playsReversed {
+                if reversed {
                     url = store.reversedURL(item.reversedFileName)
                     try await cache.ensureReversed(source: source, destination: url)
                 }
@@ -436,7 +437,8 @@ final class SessionPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
     private func prefetchReversed() {
         let store = library.store
         let cache = self.cache
-        let items = library.selected.filter(\.playsReversed)
+        guard settings.value.reversed else { return }
+        let items = library.selected
         for item in items {
             Task.detached(priority: .utility) {
                 try? await cache.ensureReversed(source: store.recordingURL(item.fileName),
